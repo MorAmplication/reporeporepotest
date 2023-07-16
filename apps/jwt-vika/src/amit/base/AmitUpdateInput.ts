@@ -38,17 +38,6 @@ class AmitUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  userName?: string;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
   username?: string;
 
   @ApiProperty({

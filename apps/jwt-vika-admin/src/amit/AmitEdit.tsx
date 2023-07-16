@@ -14,7 +14,6 @@ export const AmitEdit = (props: EditProps): React.ReactElement => {
     <Edit {...props}>
       <SimpleForm>
         <PasswordInput label="Password" source="password" />
-        <TextInput label="UserName" source="userName" />
         <TextInput label="Username" source="username" />
         <SelectArrayInput
           source="roles"

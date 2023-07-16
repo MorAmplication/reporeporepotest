@@ -5,7 +5,6 @@ export type AmitOrderByInput = {
   createdAt?: SortOrder;
   updatedAt?: SortOrder;
   password?: SortOrder;
-  userName?: SortOrder;
   username?: SortOrder;
   roles?: SortOrder;
 };

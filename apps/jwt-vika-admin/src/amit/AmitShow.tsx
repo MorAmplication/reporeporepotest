@@ -14,7 +14,6 @@ export const AmitShow = (props: ShowProps): React.ReactElement => {
         <TextField label="ID" source="id" />
         <DateField source="createdAt" label="Created At" />
         <DateField source="updatedAt" label="Updated At" />
-        <TextField label="UserName" source="userName" />
         <TextField label="Username" source="username" />
         <TextField label="Roles" source="roles" />
       </SimpleShowLayout>
