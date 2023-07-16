@@ -49,14 +49,6 @@ class Amit {
   })
   @IsString()
   @Field(() => String)
-  userName!: string;
-
-  @ApiProperty({
-    required: true,
-    type: String,
-  })
-  @IsString()
-  @Field(() => String)
   username!: string;
 
   @ApiProperty({
