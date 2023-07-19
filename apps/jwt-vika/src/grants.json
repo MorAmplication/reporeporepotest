@@ -1,37 +1,43 @@
 [
   {
     "role": "user",
-    "resource": "User",
-    "action": "create:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "User",
-    "action": "update:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "User",
+    "resource": "Mor",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "User",
+    "resource": "Mor",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Mor",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Mor",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "User",
+    "resource": "Mor",
     "action": "read:any",
     "attributes": "*"
   },
   {
     "role": "user",
     "resource": "Amit",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Amit",
     "action": "create:any",
     "attributes": "*"
   },
@@ -39,12 +45,6 @@
     "role": "user",
     "resource": "Amit",
     "action": "update:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "Amit",
-    "action": "read:own",
     "attributes": "*"
   },
   {

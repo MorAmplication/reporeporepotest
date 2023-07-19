@@ -1,5 +1,5 @@
 import { StringFilter } from "../../util/StringFilter";
 
-export type AmitWhereInput = {
+export type MorWhereInput = {
   id?: StringFilter;
 };

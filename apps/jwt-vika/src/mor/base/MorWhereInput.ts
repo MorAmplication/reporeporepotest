@@ -16,7 +16,7 @@ import { Type } from "class-transformer";
 import { IsOptional } from "class-validator";
 
 @InputType()
-class AmitWhereInput {
+class MorWhereInput {
   @ApiProperty({
     required: false,
     type: StringFilter,
@@ -29,4 +29,4 @@ class AmitWhereInput {
   id?: StringFilter;
 }
 
-export { AmitWhereInput as AmitWhereInput };
+export { MorWhereInput as MorWhereInput };

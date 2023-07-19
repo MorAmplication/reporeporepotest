@@ -11,44 +11,46 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional } from "class-validator";
-import { IsJSONValue } from "@app/custom-validators";
-import { GraphQLJSON } from "graphql-type-json";
-import { InputJsonValue } from "../../types";
+import { MorWhereInput } from "./MorWhereInput";
+import { ValidateNested, IsOptional } from "class-validator";
+import { Type } from "class-transformer";
 
 @InputType()
-class AmitUpdateInput {
+class MorListRelationFilter {
   @ApiProperty({
     required: false,
-    type: String,
+    type: () => MorWhereInput,
   })
-  @IsString()
+  @ValidateNested()
+  @Type(() => MorWhereInput)
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => MorWhereInput, {
     nullable: true,
   })
-  username?: string;
+  every?: MorWhereInput;
 
   @ApiProperty({
     required: false,
-    type: String,
+    type: () => MorWhereInput,
   })
-  @IsString()
+  @ValidateNested()
+  @Type(() => MorWhereInput)
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => MorWhereInput, {
     nullable: true,
   })
-  password?: string;
+  some?: MorWhereInput;
 
   @ApiProperty({
     required: false,
+    type: () => MorWhereInput,
   })
-  @IsJSONValue()
+  @ValidateNested()
+  @Type(() => MorWhereInput)
   @IsOptional()
-  @Field(() => GraphQLJSON, {
+  @Field(() => MorWhereInput, {
     nullable: true,
   })
-  roles?: InputJsonValue;
+  none?: MorWhereInput;
 }
-
-export { AmitUpdateInput as AmitUpdateInput };
+export { MorListRelationFilter as MorListRelationFilter };
