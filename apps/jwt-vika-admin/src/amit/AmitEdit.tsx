@@ -3,8 +3,8 @@ import {
   Edit,
   SimpleForm,
   EditProps,
-  PasswordInput,
   TextInput,
+  PasswordInput,
   SelectArrayInput,
 } from "react-admin";
 import { ROLES_OPTIONS } from "../user/RolesOptions";
@@ -13,8 +13,8 @@ export const AmitEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
-        <PasswordInput label="Password" source="password" />
         <TextInput label="Username" source="username" />
+        <PasswordInput label="Password" source="password" />
         <SelectArrayInput
           source="roles"
           choices={ROLES_OPTIONS}

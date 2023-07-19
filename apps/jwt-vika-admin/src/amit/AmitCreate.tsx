@@ -4,8 +4,8 @@ import {
   Create,
   SimpleForm,
   CreateProps,
-  PasswordInput,
   TextInput,
+  PasswordInput,
   SelectArrayInput,
 } from "react-admin";
 
@@ -15,8 +15,8 @@ export const AmitCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
-        <PasswordInput label="Password" source="password" />
         <TextInput label="Username" source="username" />
+        <PasswordInput label="Password" source="password" />
         <SelectArrayInput
           source="roles"
           choices={ROLES_OPTIONS}

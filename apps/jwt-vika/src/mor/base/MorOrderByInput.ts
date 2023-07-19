@@ -11,44 +11,46 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional } from "class-validator";
-import { IsJSONValue } from "@app/custom-validators";
-import { GraphQLJSON } from "graphql-type-json";
-import { InputJsonValue } from "../../types";
+import { IsOptional, IsEnum } from "class-validator";
+import { SortOrder } from "../../util/SortOrder";
 
-@InputType()
-class AmitUpdateInput {
+@InputType({
+  isAbstract: true,
+  description: undefined,
+})
+class MorOrderByInput {
   @ApiProperty({
     required: false,
-    type: String,
+    enum: ["asc", "desc"],
   })
-  @IsString()
   @IsOptional()
-  @Field(() => String, {
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
     nullable: true,
   })
-  username?: string;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  password?: string;
+  id?: SortOrder;
 
   @ApiProperty({
     required: false,
+    enum: ["asc", "desc"],
   })
-  @IsJSONValue()
   @IsOptional()
-  @Field(() => GraphQLJSON, {
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
     nullable: true,
   })
-  roles?: InputJsonValue;
+  createdAt?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  updatedAt?: SortOrder;
 }
 
-export { AmitUpdateInput as AmitUpdateInput };
+export { MorOrderByInput as MorOrderByInput };

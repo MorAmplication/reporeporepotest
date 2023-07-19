@@ -61,7 +61,7 @@ class AmitOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  password?: SortOrder;
+  username?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -72,7 +72,7 @@ class AmitOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  username?: SortOrder;
+  password?: SortOrder;
 
   @ApiProperty({
     required: false,

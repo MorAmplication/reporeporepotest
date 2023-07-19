@@ -24,7 +24,7 @@ class AmitCreateInput {
   })
   @IsString()
   @Field(() => String)
-  password!: string;
+  username!: string;
 
   @ApiProperty({
     required: true,
@@ -32,7 +32,7 @@ class AmitCreateInput {
   })
   @IsString()
   @Field(() => String)
-  username!: string;
+  password!: string;
 
   @ApiProperty({
     required: true,

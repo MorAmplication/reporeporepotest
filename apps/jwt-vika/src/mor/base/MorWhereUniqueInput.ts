@@ -11,22 +11,17 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { StringFilter } from "../../util/StringFilter";
-import { Type } from "class-transformer";
-import { IsOptional } from "class-validator";
+import { IsString } from "class-validator";
 
 @InputType()
-class AmitWhereInput {
+class MorWhereUniqueInput {
   @ApiProperty({
-    required: false,
-    type: StringFilter,
+    required: true,
+    type: String,
   })
-  @Type(() => StringFilter)
-  @IsOptional()
-  @Field(() => StringFilter, {
-    nullable: true,
-  })
-  id?: StringFilter;
+  @IsString()
+  @Field(() => String)
+  id!: string;
 }
 
-export { AmitWhereInput as AmitWhereInput };
+export { MorWhereUniqueInput as MorWhereUniqueInput };
